@@ -1,3 +1,4 @@
+
 package lv.venta.controller;
 
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ import lv.venta.model.Course;
 import lv.venta.service.ICourseFilterService;
 
 @Controller
-@RequestMapping("/course")
+@RequestMapping("/course/filter")
 public class CourseFilterController {
 	//TODO izveidot trīs kontrolieru funkcijas, kur katrā izsauc konkrēto servisa funkciju
 	
@@ -21,7 +22,7 @@ public class CourseFilterController {
 	private ICourseFilterService courseFilterService;
 	
 	
-	@GetMapping("/filter/creditpoints/{param}")//localhost:8080/course/filter/creditpoints/2
+	@GetMapping("/creditpoints/{param}")//localhost:8080/course/filter/creditpoints/2
 	public String getCourseFilterByCreditpoints(@PathVariable("param") int param, Model model) {
 		
 		try
@@ -37,7 +38,7 @@ public class CourseFilterController {
 		
 	}
 	
-	@GetMapping("/filter/professor/{id}")//localhost:8080/course/filter/professor/2
+	@GetMapping("/professor/{id}")//localhost:8080/course/filter/professor/2
 	public String getCourseFilterByProfessorId(@PathVariable("id") int id, Model model) {
 		
 		try
@@ -57,7 +58,7 @@ public class CourseFilterController {
 	
 	
 
-	@GetMapping("/filter/student/{id}")//localhost:8080/course/filter/student/2
+	@GetMapping("/student/{id}")//localhost:8080/course/filter/student/2
 	public String getCourseFilterByStudentId(@PathVariable("id") int id, Model model) {
 		
 		try

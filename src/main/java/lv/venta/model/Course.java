@@ -62,5 +62,23 @@ public class Course {
 		setCreditpoints(creditpoints);
 		setProfessor(professor);
 	}
+
+
+	private void setProfessor(Professor professor2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	private void setCreditpoints(int creditpoints2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	private void setTitle(String title2) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }

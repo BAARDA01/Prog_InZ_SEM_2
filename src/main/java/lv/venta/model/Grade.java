@@ -50,6 +50,21 @@ public class Grade {
 		setCourse(course);
 		setStudent(student);
 	}
+
+	private void setStudent(Student student2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void setCourse(Course course2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void setGrvalue(int grvalue2) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 	

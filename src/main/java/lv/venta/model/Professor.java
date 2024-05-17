@@ -56,4 +56,22 @@ public class Professor {
 		setSurname(surname);
 		setDegree(degree);
 	}
+
+
+	private void setDegree(Degree degree2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	private void setSurname(String surname2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	private void setName(String name2) {
+		// TODO Auto-generated method stub
+		
+	}
 }

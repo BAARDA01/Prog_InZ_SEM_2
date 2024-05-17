@@ -55,4 +55,16 @@ public class Student {
 		setSurname(surname);
 	}
 
+
+	private void setSurname(String surname2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	private void setName(String name2) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
