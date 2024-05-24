@@ -24,7 +24,7 @@ import lombok.ToString;
 @ToString
 @Table(name="StudentTable")
 @Entity
-public class Student {
+public class Student extends Person{
 	
 	@Id
 	@Column(name = "Ids")
@@ -32,18 +32,6 @@ public class Student {
 	@Setter(value = AccessLevel.NONE)
 	private int ids;
 	
-	//TODO uzlabot regex gan vārdam, gan uzvārdam
-	@Column(name = "Name")
-	@NotNull
-	@Size(min = 3, max = 50)
-	@Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀŽČŅ]{1}[a-zēūīļķģšāžčņ]+", message = "Only letters and space are allowed")
-	private String name;
-	
-	@Column(name = "Surname")
-	@NotNull
-	@Size(min = 3, max = 50)
-	@Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀŽČŅ]{1}[a-zēūīļķģšāžčņ]+", message = "Only letters and space are allowed")
-	private String surname;
 	
 	@OneToMany(mappedBy = "student")
 	@ToString.Exclude
@@ -51,20 +39,7 @@ public class Student {
 	
 
 	public Student(String name, String surname) {
-		setName(name);
-		setSurname(surname);
-	}
-
-
-	private void setSurname(String surname2) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	private void setName(String name2) {
-		// TODO Auto-generated method stub
-		
+		super(name, surname); //izsaucām bāzes klases konstruktoru
 	}
 
 }
