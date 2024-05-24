@@ -49,7 +49,7 @@ public class Course {
 	
 	
 	@OneToOne
-	@JoinColumn(name = "Idpe")//Ta k professor savu ID dabū no Personas, tad te jānorāda Personas ID kolonna
+	@JoinColumn(name = "Idp")//Professor klases kolonnas nosaukums
 	private Professor professor;
 	
 	@OneToMany(mappedBy = "course")

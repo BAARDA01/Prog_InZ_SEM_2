@@ -22,11 +22,27 @@ import lombok.ToString;
 @ToString
 @Table(name = "ProfessorTable")
 @Entity
-public class Professor extends Person{
+public class Professor {
+	@Id
+	@Column(name = "Idp")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Setter(value = AccessLevel.NONE)
+	private int idp;
 
-	//ID nāks no personas klases
-		
-	//@NotNull - jāņem nosts, jo ar SINGLE inheratnce stratēgiju studenti un profesero būs vienā tabulā, kur Studentiem nebūs degree
+	// TODO uzlabot regex gan vārdam, gan uzvārdam
+	@Column(name = "Name")
+	@NotNull
+	@Size(min = 3, max = 50)
+	@Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀŽČŅ]{1}[a-zēūīļķģšāžčņ]+", message = "Only letters and space are allowed")
+	private String name;
+
+	@Column(name = "Surname")
+	@NotNull
+	@Size(min = 3, max = 50)
+	@Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀŽČŅ]{1}[a-zēūīļķģšāžčņ]+", message = "Only letters and space are allowed")
+	private String surname;
+	
+	@NotNull
 	@Column(name="Degree")
 	private Degree degree;
 	
@@ -36,12 +52,25 @@ public class Professor extends Person{
 	
 
 	public Professor(String name, String surname, Degree degree) {
-		super(name, surname);
+		setName(name);
+		setSurname(surname);
 		setDegree(degree);
 	}
 
 
 	private void setDegree(Degree degree2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	private void setSurname(String surname2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	private void setName(String name2) {
 		// TODO Auto-generated method stub
 		
 	}
